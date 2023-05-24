@@ -158,3 +158,12 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+## MISC
+# My additions
+.WAQI_API_TOKEN
+old/
+cache/
+data/WAQIData/historical_readings.json
+data/WAQIData/all_stations.csv
+data/OpenStreetMapData/all_stations_osm.pickle
