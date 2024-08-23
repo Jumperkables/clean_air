@@ -164,6 +164,8 @@ cython_debug/
 .WAQI_API_TOKEN
 old/
 cache/
+data/
 data/WAQIData/historical_readings.json
 data/WAQIData/all_stations.csv
 data/OpenStreetMapData/all_stations_osm.pickle
+all_data.h5
