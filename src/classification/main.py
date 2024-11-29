@@ -2,16 +2,16 @@
 import argparse
 
 # third party imports
+import lightgbm as lgb
 from loguru import logger
 import numpy as np
-from sklearn.linear_model import LinearRegression
+from sklearn.multioutput import MultiOutputRegressor
 from sklearn.metrics import mean_squared_error
 import torch
 from tqdm import tqdm
 
 # local imports
 import dataset_5map
-
 
 def parse_args():
     args = argparse.ArgumentParser(description="5MAP running script")
@@ -23,6 +23,7 @@ def parse_args():
     dset_args.add_argument("--landuse", action='store_true')
     dset_args.add_argument("--osm", action='store_true')
     dset_args.add_argument("--label_modality", type=str, choices=['pollutant', 'weather', 'elevation', 'landuse', 'osm'])
+    dset_args.add_argument("--normalise", action='store_true')
     args = args.parse_args()
     logger.info(args)
     if not args.require_other_modalities:
@@ -44,6 +45,7 @@ def main(args):
         elevation=args.elevation,
         landuse=args.landuse,
         osm=args.osm,
+        normalise=args.normalise,
     )
     dataset.__getitem__(0)  # Needed to initialise input and output features
     input_features, num_input_features, label_features, num_label_features = dataset.get_input_output_features()
@@ -85,10 +87,9 @@ def main(args):
     all_train_data = np.concatenate([all_train_data, all_valid_data], axis=0)
     all_train_labels = np.concatenate([all_train_labels, all_valid_labels], axis=0)
 
-    # Create the model
-
     # Train the model
-    model = LinearRegression()
+    base_model = lgb.LGBMRegressor()
+    model = MultiOutputRegressor(base_model)
     model.fit(all_train_data, all_train_labels)
     test_pred = model.predict(all_test_data)
     mse = mean_squared_error(all_test_labels, test_pred)
