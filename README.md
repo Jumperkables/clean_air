@@ -1,5 +1,6 @@
 # 5MAP: 5 Modalities Aligned for Air Pollution
 Augmenting air pollution readings with 4 other modalities:
+![comp_table](5map_vs_others.png)
 1. **Air Pollution:** 
 - [WAQI](https://waqi.info/)
     * `PM-25`
@@ -11,7 +12,7 @@ Augmenting air pollution readings with 4 other modalities:
     * `co`
 - Daily, Over 3+ years
 - ~15,000 sites worldwide
-![map](world_map_cropped.pdf)
+![map](world_map.png)
 
 2. **Weather:**
 - ERA5 re-analysis from [copernius](https://pypi.org/project/cdsapi/)
@@ -40,8 +41,12 @@ Augmenting air pollution readings with 4 other modalities:
     * `mangroves`
     * `moss_and_lichen`
 - Gathered statistics in a 15km radius around each site (from tiff)
+![landuse_tab](landuse_tab.png)
 
-4. **OpenStreetMap:**
+4. **Elevation:**
+- The height above sea level at each ~15,000 site
+
+5. **OpenStreetMap:**
 - Semi-structured list of things related to air-pollution
 ```python
 tags = {
@@ -50,10 +55,9 @@ tags = {
     "landuse": ["industrial", "highway", "motorway", "quarry", "depot", "farm"],
 }
 ```
-- Return features are **far too numerous to list here. Check pdf**
+- Return features are as follows
+![osm_tab](osm_table.png)
 
-5. **Elevation:**
-- The height above sea level at each ~15,000 site
 
 
 ## Installation
