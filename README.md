@@ -17,7 +17,7 @@ Augmenting air pollution readings with 4 other modalities:
 #### My Thoughts
 - Pollution and healthcare have been paired passions of mine since I was 11 and became 'climate aware' 
 - Web scraping practice
-- `src/data_processing/get_aqicn_readings.py`
+- [`src/data_processing/get_aqicn_readings.py`](src/data_processing/get_aqicn_readings.py)
  
 
 ## **2. Weather:**
@@ -32,7 +32,6 @@ Augmenting air pollution readings with 4 other modalities:
     * `total_precipitation`
 - At each EXACT lat-lon geo-cords for the above ~15,000 sites
 - Hourly
-
 ####  My Thoughts
 - Practiced efficiency tricks for processing geogrphical data (longitudinal `.grib`)
     - **Efficient** to access data down `time` dimension
@@ -42,7 +41,7 @@ Augmenting air pollution readings with 4 other modalities:
     - `xr.open_dataset(engine="cfgrib")`
     - Efficient `np` indexing
     - 200 days `->` 4 days running
-- `src/data_processing/era_*.py`
+- [`src/data_processing/era_*.py`](src/data_processing/era5_process_final.py)
 
 
 ## **3. Landuse:** 
