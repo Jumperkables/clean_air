@@ -2,8 +2,7 @@
 Augmenting air pollution readings with 4 other modalities:
 ![comp_table](5map_vs_others.png)
 
-## QR Code For the Repo
-For your convenience
+## QR Code For This Repo
 ![qr](qr.png)
 
 ## **1. Air Pollution:** 
