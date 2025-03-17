@@ -121,22 +121,21 @@ I have many other more ML heavy projects that were a close second
 # Next Steps
 - I have basic classification results and framework set up
     * [`src/classification/`](src/classification/)
-
-
-
-
-<>## Installation
-<>- `git clone git@github.com:Jumperkables/clean_air.git`
-<>- Make and source a python virtual env
-<>- `pip install -r requirements.txt`
-<>
-<>## Data Preparation
-<>0. Acquire a [WAQI API access token](https://aqicn.org/data-platform/token/). Save it in this directory as `.WAQI_API_TOKEN` 
-<>1. `python src/get_aqicn_station.py`: Generate a csv file for all stations. Includes name, id, lat-lon co-ords.
-<>You can run the next two steps at the same time if you want.
-<>2. `python src/get_OSM_features.py`: For each station, get the relevant OpenStreetMap features. Ther version of OpenStreetMap data in our publication can be found [here](https://somewhere_tom_hosted.com).
-<>3. `python src/get_aqicn_readings.py`: Get all available readings for particulates at daily granularity.
-<>
-<>## Data Explortation
-<>`python src/explore_osm.py`
-<>
+- Use this to put a 5MAP classifier on an embedded Device (Nvidia Jetson) as proof of concept
+- Shopping List
+| Component | Brand | Approx Price |
+| -------- | -------- | -------- |
+| Jetson Board | NVIDIA Jetson Orin Nano (4GB) | £150 |
+| Storage | SanDisk Extreme MicroSD (32GB) | £15 |
+| Air Pollution Sensor | Plantower PMS5003 | £40 |
+| Weather Sensor | Bosch BME680 | £25 |
+| GPS Module | u-blox NEO-6M | £30 |
+| Internet Connectivity	Waveshare | 4G LTE (SIM7600G-H) | £70 |
+| WiFi Adapter (Optional) | TP-Link Archer T3U | £20 |
+| External GPS Antenna | Generic | £10 |
+| Power Supply | Anker PowerCore+ PD 26800mAh | £80 |
+| Enclosure | Generic ABS/Aluminum Box | £30 |
+- Learning List
+    * C++ [my progress here](https://github.com/Jumperkables/learning/tree/main/c%2B%2B)
+    * CUDA
+    * TensorRT
