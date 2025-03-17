@@ -57,6 +57,8 @@ tags = {
 ```
 - Return features are as follows
 ![osm_tab](osm_table.png)
+![all_tab](all_tab.png)
+
 
 
 
