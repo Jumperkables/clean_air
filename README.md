@@ -1,6 +1,11 @@
 # 5MAP: 5 Modalities Aligned for Air Pollution
 Augmenting air pollution readings with 4 other modalities:
 ![comp_table](5map_vs_others.png)
+
+## QR Code For the Repo
+For your convenience
+![qr](qr.png)
+
 ## **1. Air Pollution:** 
 - [WAQI](https://waqi.info/)
     * `PM-25`
