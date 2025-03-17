@@ -33,7 +33,6 @@ Augmenting air pollution readings with 4 other modalities:
 - At each EXACT lat-lon geo-cords for the above ~15,000 sites
 - Hourly
 
-
 ####  My Thoughts
 - Practiced efficiency tricks for processing geogrphical data (longitudinal `.grib`)
     - **Efficient** to access data down `time` dimension
@@ -61,6 +60,14 @@ Augmenting air pollution readings with 4 other modalities:
     * `moss_and_lichen`
 - Gathered statistics in a 15km radius around each site (from tiff)
 ![landuse_tab](landuse_tab.png)
+
+#### My Thoughts
+- Challenging but satisfying method of collating these
+    1. Large satellite images divide the world up in squares (`.tiff`)
+    2. If a site is on the edge of one, the radius may overlap in up to **4** tiles at once
+    3. Satisfying geometric reasoning required that was fun to code
+- [`src/data_processing/landuse.py`](src/data_processing/landuse.py)
+
 
 ## **4. Elevation:**
 - The height above sea level at each ~15,000 site
