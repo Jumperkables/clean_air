@@ -12,7 +12,7 @@ Augmenting air pollution readings with 4 other modalities:
     * `PM-1`
     * `o3`
     * `no2`
-    * `co2`
+    * `so2`
     * `co`
 - Daily, Over 3+ years
 - ~15,000 sites worldwide
@@ -130,15 +130,6 @@ I have many other more ML heavy projects that were a close second
 | Component | Brand | Approx Price |
 | -------- | -------- | -------- |
 | Jetson Board | NVIDIA Jetson Orin Nano (4GB) | £150 |
-| Storage | SanDisk Extreme MicroSD (32GB) | £15 |
-| Air Pollution Sensor | Plantower PMS5003 | £40 |
-| Weather Sensor | Bosch BME680 | £25 |
-| GPS Module | u-blox NEO-6M | £30 |
-| Internet Connectivity	Waveshare | 4G LTE (SIM7600G-H) | £70 |
-| WiFi Adapter (Optional) | TP-Link Archer T3U | £20 |
-| External GPS Antenna | Generic | £10 |
-| Power Supply | Anker PowerCore+ PD 26800mAh | £80 |
-| Enclosure | Generic ABS/Aluminum Box | £30 |
 - Learning List
     * C++ [my progress here](https://github.com/Jumperkables/learning/tree/main/c%2B%2B)
     * CUDA
