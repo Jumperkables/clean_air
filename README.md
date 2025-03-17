@@ -14,6 +14,12 @@ Augmenting air pollution readings with 4 other modalities:
 - ~15,000 sites worldwide
 ![map](world_map.png)
 
+#### My Thoughts
+- Pollution and healthcare have been paired passions of mine since I was 11 and became 'climate aware' 
+- Web scraping practice
+- `src/data_processing/get_aqicn_readings.py`
+ 
+
 ## **2. Weather:**
 - ERA5 re-analysis from [copernius](https://pypi.org/project/cdsapi/)
     * `100m_u_component_of_wind`
@@ -26,6 +32,19 @@ Augmenting air pollution readings with 4 other modalities:
     * `total_precipitation`
 - At each EXACT lat-lon geo-cords for the above ~15,000 sites
 - Hourly
+
+
+####  My Thoughts
+- Practiced efficiency tricks for processing geogrphical data (longitudinal `.grib`)
+    - **Efficient** to access data down `time` dimension
+    - **Hard** to access data across the spatial dimension (lat-lons for each 15,000 site)
+    - `import xarray`
+    - `xr.set_options(parallel=True)` 
+    - `xr.open_dataset(engine="cfgrib")`
+    - Efficient `np` indexing
+    - 200 days `->` 4 days running
+- `src/data_processing/era_*.py`
+
 
 ## **3. Landuse:** 
 - [Worldcover 2021 ESA](https://worldcover2021.esa.int/download)
