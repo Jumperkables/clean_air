@@ -1,5 +1,60 @@
-# clean_air
-Placeholder repo for the clean air work for before i choose a name.
+# 5MAP: 5 Modalities Aligned for Air Pollution
+Augmenting air pollution readings with 4 other modalities:
+1. **Air Pollution:** 
+- [WAQI](https://waqi.info/)
+    * `PM-25`
+    * `PM-10`
+    * `PM-1`
+    * `o3`
+    * `no2`
+    * `co2`
+    * `co`
+- Daily, Over 3+ years
+- ~15,000 sites worldwide
+![map](world_map_cropped.pdf)
+
+2. **Weather:**
+- ERA5 re-analysis from [copernius](https://pypi.org/project/cdsapi/)
+    * `100m_u_component_of_wind`
+    * `100m_v_component_of_wind`
+    * `10m_u_component_of_wind`
+    * `10m_v_component_of_wind`
+    * `2m_temperature`
+    * `skin_temperature`
+    * `surface_pressure`
+    * `total_precipitation`
+- At each EXACT lat-lon geo-cords for the above ~15,000 sites
+- Hourly
+
+3. **Landuse:** 
+- [Worldcover 2021 ESA](https://worldcover2021.esa.int/download)
+    * `tree_cover`
+    * `shrubland`
+    * `grassland`
+    * `cropland`
+    * `built_up`
+    * `bare_sparse_vegetation`
+    * `snow_and_ice`
+    * `permanent_water_bodies`
+    * `herbaceous_wetland`
+    * `mangroves`
+    * `moss_and_lichen`
+- Gathered statistics in a 15km radius around each site (from tiff)
+
+4. **OpenStreetMap:**
+- Semi-structured list of things related to air-pollution
+```python
+tags = {
+    "power": True,
+    "man_made": ["petroleum_well", "monitoring_station"],
+    "landuse": ["industrial", "highway", "motorway", "quarry", "depot", "farm"],
+}
+```
+- Return features are **far too numerous to list here. Check pdf**
+
+5. **Elevation:**
+- The height above sea level at each ~15,000 site
+
 
 ## Installation
 - `git clone git@github.com:Jumperkables/clean_air.git`
