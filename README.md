@@ -1,9 +1,9 @@
 # 5MAP: 5 Modalities Aligned for Air Pollution
 Augmenting air pollution readings with 4 other modalities:
-![comp_table](5map_vs_others.png)
+![comp_table](figs/5map_vs_others.png)
 
 ## QR Code For This Repo
-![qr](qr.png)
+![qr](figs/qr.png)
 
 ## **1. Air Pollution:** 
 - [WAQI](https://waqi.info/)
@@ -16,7 +16,7 @@ Augmenting air pollution readings with 4 other modalities:
     * `co`
 - Daily, Over 3+ years
 - ~15,000 sites worldwide
-![map](world_map.png)
+![map](figs/world_map.png)
 #### My Thoughts
 - Pollution and healthcare have been paired passions of mine since I was 11 and became 'climate aware' 
 - Web scraping practice
@@ -61,7 +61,7 @@ Augmenting air pollution readings with 4 other modalities:
     * `mangroves`
     * `moss_and_lichen`
 - Gathered statistics in a 15km radius around each site (from tiff)
-![landuse_tab](landuse_tab.png)
+![landuse_tab](figs/landuse_tab.png)
 #### My Thoughts
 - Challenging but satisfying method of collating these
     1. Large satellite images divide the world up in squares (`.tiff`)
@@ -87,8 +87,8 @@ tags = {
 }
 ```
 - Return features are as follows
-![osm_tab](osm_table.png)
-![all_tab](all_tab.png)
+![osm_tab](figs/osm_table.png)
+![all_tab](figs/all_tab.png)
 #### My Thoughts
 - Extremely rich semi-structured data
 - Significantly more complicated than comparable publically available dataset
